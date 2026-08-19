@@ -1,0 +1,1700 @@
+/* ================= GLOBAL ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  background: #ffffff;
+
+  color: #1F2937;
+
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 90px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 70px;
+
+  background: rgba(255,255,255,0.96);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+
+  z-index: 1000;
+}
+
+/* LOGO */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 78px;
+  width: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 45px;
+
+  list-style: none;
+}
+
+/* NAV ITEMS */
+
+.nav-links li a {
+  text-decoration: none;
+
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+
+.nav-links li a:hover {
+  color: #D62828;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(rgba(7,15,30,0.82),
+    rgba(7,15,30,0.82)),
+    url('../images/hero/factory.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 140px 80px 80px;
+}
+
+/* HERO LAYOUT */
+
+.hero-container {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 70px;
+}
+
+/* LEFT SIDE */
+
+.hero-content {
+  flex: 1;
+
+  max-width: 700px;
+
+  color: white;
+}
+
+/* SMALL TAG */
+
+.hero-tag {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.14);
+
+  border-radius: 999px;
+
+  backdrop-filter: blur(10px);
+
+  color: #FCA5A5;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 28px;
+}
+
+/* HEADING */
+
+.hero-content h1 {
+  font-size: 56px;
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  margin-bottom: 26px;
+
+  letter-spacing: -2px;
+}
+
+/* RED TEXT */
+
+.hero-content h1 span {
+  color: #EF4444;
+}
+
+/* DESCRIPTION */
+
+.hero-content p {
+  font-size: 16px;
+
+  line-height: 1.9;
+
+  color: rgba(255,255,255,0.82);
+
+  margin-bottom: 40px;
+
+  max-width: 620px;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 18px;
+
+  margin-bottom: 45px;
+}
+
+/* STATS */
+
+.hero-stats {
+  display: flex;
+
+  gap: 50px;
+
+  flex-wrap: wrap;
+}
+
+.stat-box h2 {
+  font-size: 34px;
+
+  font-weight: 800;
+
+  color: white;
+
+  margin-bottom: 6px;
+}
+
+.stat-box p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: rgba(255,255,255,0.7);
+
+  line-height: 1.4;
+}
+
+/* RIGHT SIDE */
+
+.hero-image {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+
+  position: relative;
+}
+
+/* TEAM IMAGE */
+
+.hero-image img {
+  width: 100%;
+
+  max-width: 520px;
+
+  border-radius: 28px;
+
+  object-fit: cover;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.45);
+
+  border: 4px solid rgba(255,255,255,0.08);
+}
+
+/* QUOTE CARD */
+
+.team-quote {
+  position: absolute;
+
+  bottom: 40px;
+
+  right: 40px;
+
+  background: white;
+
+  color: #111827;
+
+  padding: 22px;
+
+  width: 280px;
+
+  border-radius: 22px;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,0.22);
+}
+
+.team-quote p {
+  color: #374151;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  margin-bottom: 12px;
+}
+
+.team-quote h4 {
+  font-size: 15px;
+
+  color: #D62828;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+  .hero-container {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 58px;
+  }
+
+  .team-quote {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 160px 25px 80px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  .team-quote {
+    position: relative;
+
+    width: 100%;
+
+    right: auto;
+    bottom: auto;
+
+    margin-top: 20px;
+  }
+}
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+
+  padding: 15px 34px;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+
+  transition: 0.3s ease;
+}
+
+/* PRIMARY BUTTON */
+
+.primary-btn {
+  background: #D62828;
+
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #A4161A;
+
+  transform: translateY(-2px);
+}
+
+/* SECONDARY BUTTON */
+
+.secondary-btn {
+  border: 2px solid white;
+
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: white;
+
+  color: #111827;
+}
+
+/* ================= COMMON SECTION HEADERS ================= */
+
+.section-tag {
+  color: #D62828;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+
+  text-transform: uppercase;
+}
+
+.model-content h2,
+.section-header h2 {
+  font-size: 34px;
+
+  font-weight: 700;
+
+  color: #111827;
+
+  margin-bottom: 10px;
+}
+
+.model-description {
+  font-size: 14px;
+
+  color: #6B7280;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+/* ================= MODEL SECTION ================= */
+
+.model-section {
+  position: relative;
+
+  padding: 80px 60px;
+
+  background: #F8F9FA;
+
+  text-align: center;
+}
+
+.model-content {
+  max-width: 800px;
+
+  margin: auto;
+
+  margin-bottom: 40px;
+}
+
+/* 3D MODEL */
+
+model-viewer {
+  width: 520px;
+  height: 360px;
+
+  margin: auto;
+
+  background: transparent;
+
+  transition: 0.5s ease;
+}
+
+/* ================= COMMON SLIDER BUTTONS ================= */
+
+.slider-btn {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(0,0,0,0.75);
+
+  color: white;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  z-index: 10;
+}
+
+.slider-btn:hover {
+  background: #D62828;
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* MODEL BUTTONS */
+
+.model-left-btn {
+  left: 80px;
+}
+
+.model-right-btn {
+  right: 80px;
+}
+
+/* ================= MACHINERY SECTION ================= */
+
+
+/* SECTION HEADER */
+
+.section-header {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+/* MACHINE SLIDER */
+/* ================= MODEL SECTION ================= */
+
+.model-section {
+  position: relative;
+
+  padding: 80px 0;
+
+  background: #F8F9FA;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.model-content {
+  max-width: 800px;
+
+  margin: auto;
+
+  margin-bottom: 50px;
+}
+
+/* MOVING MODEL TRACK */
+
+.model-track {
+  display: flex;
+
+  align-items: center;
+
+  gap: 40px;
+
+  width: max-content;
+
+  animation: moveModels 18s linear infinite;
+}
+
+/* MODEL VIEWER */
+
+.model-track model-viewer {
+  width: 360px;
+
+  height: 320px;
+
+  flex-shrink: 0;
+
+  background: transparent;
+
+  transition: 0.4s ease;
+}
+
+/* ================= MACHINERY SECTION ================= */
+
+.parts-section {
+  padding: 100px 0;
+
+  background: white;
+
+  overflow: hidden;
+}
+
+/* SECTION HEADER */
+
+.section-header {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+/* MOVING MACHINE TRACK */
+
+.machine-track {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  width: max-content;
+
+  animation: moveMachines 18s linear infinite;
+}
+
+/* MACHINE CARD */
+
+.part-card {
+  flex-shrink: 0;
+}
+
+/* MACHINE IMAGE */
+
+.part-card img {
+  width: 300px;
+
+  height: 300px;
+
+  object-fit: contain;
+
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  box-shadow: 0 12px 35px rgba(0,0,0,0.10);
+
+  transition: 0.4s ease;
+}
+
+/* HOVER EFFECT */
+
+.part-card img:hover,
+.model-track model-viewer:hover {
+  transform: translateY(-8px);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes moveModels {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes moveMachines {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .model-track model-viewer {
+    width: 300px;
+    height: 280px;
+  }
+
+  .part-card img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .model-section,
+  .parts-section {
+    padding: 70px 0;
+  }
+
+  .model-track {
+    gap: 20px;
+  }
+
+  .machine-track {
+    gap: 20px;
+  }
+
+  .model-track model-viewer {
+    width: 240px;
+    height: 220px;
+  }
+
+  .part-card img {
+    width: 200px;
+    height: 200px;
+
+    padding: 14px;
+  }
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.placeholder-section {
+  padding: 120px 80px;
+
+  background: #F8F9FA;
+
+  text-align: center;
+}
+
+.placeholder-section h2 {
+  font-size: 38px;
+
+  font-weight: 700;
+
+  margin-bottom: 24px;
+
+  color: #111827;
+}
+
+.placeholder-section p {
+  max-width: 900px;
+
+  margin: auto;
+
+  font-size: 17px;
+
+  line-height: 1.9;
+
+  color: #4B5563;
+}
+
+/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+  padding: 100px 80px;
+
+  background: white;
+
+  border-top: 1px solid #E5E7EB;
+}
+
+/* CONTAINER */
+
+.contact-container {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 80px;
+}
+
+/* LEFT SIDE */
+
+.contact-left {
+  flex: 1;
+
+  min-width: 320px;
+}
+
+.contact-left h2 {
+  font-size: 34px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  color: #111827;
+
+  margin-bottom: 16px;
+}
+
+.contact-left span {
+  color: #D62828;
+}
+
+.contact-left p {
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: #6B7280;
+
+  max-width: 420px;
+}
+
+/* RIGHT SIDE */
+
+.contact-right {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+/* CONTACT CARD */
+
+.contact-card {
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.contact-card h3 {
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+  color: #D62828;
+
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: #111827;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #111827;
+
+  padding: 22px;
+
+  text-align: center;
+}
+
+.footer p {
+  color: #D1D5DB;
+
+  font-size: 13px;
+
+  letter-spacing: 0.5px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+  }
+
+  model-viewer {
+    width: 100%;
+    height: 420px;
+  }
+
+
+  #machine-image {
+    height: 450px;
+  }
+
+  .model-left-btn {
+    left: 20px;
+  }
+
+  .model-right-btn {
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: auto;
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .nav-links {
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .model-content h2,
+  .section-header h2,
+  .placeholder-section h2,
+  .contact-left h2 {
+    font-size: 28px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  model-viewer {
+    height: 340px;
+  }
+
+  #machine-image {
+    height: 320px;
+  }
+
+  .slider-btn {
+    width: 45px;
+    height: 45px;
+
+    font-size: 18px;
+  }
+
+  .machine-left-btn {
+    left: 10px;
+  }
+
+  .machine-right-btn {
+    right: 10px;
+  }
+
+  .model-left-btn {
+    left: 10px;
+  }
+
+  .model-right-btn {
+    right: 10px;
+  }
+}
+/* ================= QUOTE PAGE ================= */
+
+.quote-section {
+  padding: 160px 20px 100px;
+
+  background:
+    linear-gradient(rgba(17,24,39,0.92),
+    rgba(17,24,39,0.92)),
+    url('../images/hero/factory.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+  min-height: 100vh;
+}
+
+.quote-container {
+  max-width: 850px;
+
+  margin: auto;
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 60px;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+}
+
+.quote-header {
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.quote-header h1 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 15px;
+}
+
+.quote-header p {
+  color: #6B7280;
+
+  line-height: 1.8;
+}
+
+/* FORM */
+
+.quote-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  margin-bottom: 10px;
+
+  color: #111827;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 16px 18px;
+
+  border: 1px solid #D1D5DB;
+
+  border-radius: 12px;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 15px;
+
+  transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+
+  border-color: #D62828;
+
+  box-shadow: 0 0 0 4px rgba(214,40,40,0.12);
+}
+
+.submit-btn {
+  margin-top: 10px;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+/* SUCCESS MESSAGE */
+
+.success-box {
+  display: none;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 40px 20px;
+}
+
+.success-tick {
+  width: 110px;
+  height: 110px;
+
+  border-radius: 50%;
+
+  background: #16A34A;
+
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 60px;
+
+  margin-bottom: 25px;
+
+  box-shadow: 0 12px 30px rgba(22,163,74,0.3);
+}
+
+.success-box h2 {
+  font-size: 42px;
+
+  color: #111827;
+
+  margin-bottom: 18px;
+}
+
+.success-box p {
+  color: #6B7280;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin-bottom: 8px;
+}
+
+.success-contact {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.success-contact p {
+  color: #111827;
+
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .quote-container {
+    padding: 35px 25px;
+  }
+
+  .quote-header h1 {
+    font-size: 32px;
+  }
+
+  .success-box h2 {
+    font-size: 32px;
+  }
+
+}
+/* =========================================================
+INDUSTRIES SECTION
+========================================================= */
+
+.industries-section {
+
+padding: 100px 80px;
+
+background: #F8F9FA;
+
+text-align: center;
+
+}
+
+/* SECTION INTRO */
+
+.section-intro {
+
+max-width: 700px;
+
+margin: 0 auto 50px;
+
+font-size: 16px;
+
+line-height: 1.8;
+
+color: #6B7280;
+
+}
+
+/* INDUSTRIES GRID */
+
+.industries-grid {
+
+max-width: 1200px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 25px;
+
+}
+
+/* INDUSTRY CARD */
+
+.industry-card {
+
+position: relative;
+
+padding: 35px;
+
+background: white;
+
+border: 1px solid #E5E7EB;
+
+border-radius: 18px;
+
+text-align: left;
+
+transition: 0.4s ease;
+
+}
+
+/* CARD HOVER */
+
+.industry-card:hover {
+
+transform: translateY(-8px);
+
+box-shadow: 0 15px 35px rgba(0,0,0,0.10);
+
+border-color: #D62828;
+
+}
+
+/* NUMBER */
+
+.industry-number {
+
+margin-bottom: 20px;
+
+font-size: 13px;
+
+font-weight: 700;
+
+letter-spacing: 2px;
+
+color: #D62828;
+
+}
+
+/* TITLE */
+
+.industry-card h3 {
+
+margin-bottom: 12px;
+
+font-size: 21px;
+
+font-weight: 700;
+
+color: #111827;
+
+}
+
+/* DESCRIPTION */
+
+.industry-card p {
+
+margin: 0;
+
+font-size: 14px;
+
+line-height: 1.8;
+
+color: #6B7280;
+
+}
+
+/* BUTTON */
+
+.industries-button {
+
+margin-top: 50px;
+
+}
+
+/* =========================================================
+INDUSTRIES PAGE
+========================================================= */
+
+/* PAGE HERO */
+
+.industry-hero {
+
+min-height: 60vh;
+
+padding: 100px 80px;
+
+display: flex;
+
+align-items: center;
+
+background: #F8F9FA;
+
+}
+
+/* HERO CONTENT */
+
+.industry-hero-content {
+
+max-width: 850px;
+
+margin: auto;
+
+text-align: center;
+
+}
+
+/* HERO HEADING */
+
+.industry-hero h1 {
+
+margin: 15px 0 25px;
+
+font-size: clamp(42px, 6vw, 72px);
+
+line-height: 1.1;
+
+font-weight: 800;
+
+color: #111827;
+
+}
+
+/* HERO DESCRIPTION */
+
+.industry-hero p {
+
+max-width: 700px;
+
+margin: 0 auto 35px;
+
+font-size: 16px;
+
+line-height: 1.9;
+
+color: #6B7280;
+
+}
+
+/* =========================================================
+INDUSTRY DETAILS
+========================================================= */
+
+.industry-detail-section {
+
+background: white;
+
+}
+
+.industry-detail-grid {
+
+max-width: 1200px;
+
+margin: 50px auto 0;
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 25px;
+
+}
+
+/* DETAIL CARD */
+
+.industry-detail-card {
+
+padding: 40px;
+
+background: #F8F9FA;
+
+border: 1px solid #E5E7EB;
+
+border-radius: 18px;
+
+transition: 0.4s ease;
+
+}
+
+/* DETAIL CARD HOVER */
+
+.industry-detail-card:hover {
+
+transform: translateY(-8px);
+
+box-shadow: 0 15px 35px rgba(0,0,0,0.10);
+
+border-color: #D62828;
+
+}
+
+/* NUMBER */
+
+.industry-detail-card span {
+
+font-size: 13px;
+
+font-weight: 700;
+
+letter-spacing: 2px;
+
+color: #D62828;
+
+}
+
+/* TITLE */
+
+.industry-detail-card h3 {
+
+margin: 20px 0 12px;
+
+font-size: 22px;
+
+font-weight: 700;
+
+color: #111827;
+
+}
+
+/* DESCRIPTION */
+
+.industry-detail-card p {
+
+margin: 0;
+
+font-size: 15px;
+
+line-height: 1.8;
+
+color: #6B7280;
+
+}
+
+/* =========================================================
+INDUSTRIES CTA
+========================================================= */
+
+.industry-cta {
+
+padding: 100px 30px;
+
+background: #F8F9FA;
+
+text-align: center;
+
+}
+
+.industry-cta h2 {
+
+max-width: 800px;
+
+margin: 15px auto 15px;
+
+font-size: 38px;
+
+line-height: 1.3;
+
+color: #111827;
+
+}
+
+.industry-cta p {
+
+margin-bottom: 30px;
+
+font-size: 16px;
+
+color: #6B7280;
+
+}
+
+/* =========================================================
+INDUSTRIES RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+
+.industries-section,
+.industry-detail-section {
+
+padding: 80px 40px;
+
+}
+
+.industries-grid,
+.industry-detail-grid {
+
+grid-template-columns: repeat(2, 1fr);
+
+}
+
+.industry-hero {
+
+padding: 80px 40px;
+
+}
+
+}
+
+@media (max-width: 768px) {
+
+.industries-section,
+.industry-detail-section {
+
+padding: 70px 25px;
+
+}
+
+.industries-grid,
+.industry-detail-grid {
+
+grid-template-columns: 1fr;
+
+}
+
+.industry-hero {
+
+
+min-height: 50vh;
+
+padding: 70px 25px;
+
+
+}
+
+.industry-hero h1 {
+
+
+font-size: 42px;
+
+
+}
+
+.industry-cta {
+
+
+padding: 70px 25px;
+
+
+}
+
+.industry-cta h2 {
+
+
+font-size: 30px;
+
+
+}
+
+}
+
+@media (max-width: 480px) {
+
+.industry-hero h1 {
+
+
+font-size: 36px;
+
+
+}
+
+.industry-card,
+.industry-detail-card {
+
+
+padding: 28px;
+
+
+}
+
+}
+/* ================= COMPANY BRAND ================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand .logo {
+  height: 58px;
+  width: auto;
+  object-fit: contain;
+}
+
+.company-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+/* ================= TRUSTED PARTNERS ================= */
+
+/* ================= TRUSTED PARTNERS ================= */
+
+.partners-section {
+  padding: 80px 8% 45px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.partners-section .section-header {
+  max-width: 800px;
+  margin: 0 auto 35px;
+}
+
+/* ================= TRUSTED PARTNERS ================= */
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.partner-card {
+  width: 260px;
+  height: 150px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+}
+
+.partner-card img {
+  max-width: 100%;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.placeholder-section {
+  margin-top: 0;
+  padding-top: 60px;
+}
