@@ -498,7 +498,9 @@ model-viewer {
 
   margin: auto;
 
-  background: transparent;
+  background: radial-gradient(circle at 35% 30%, #2b3038 0%, #14171b 75%);
+
+  border-radius: 20px;
 
   transition: 0.5s ease;
 }
@@ -605,7 +607,11 @@ model-viewer {
 
   flex-shrink: 0;
 
-  background: transparent;
+  background: radial-gradient(circle at 35% 30%, #2b3038 0%, #14171b 75%);
+
+  border-radius: 20px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 
   transition: 0.4s ease;
 }
@@ -1697,4 +1703,164 @@ padding: 28px;
 .placeholder-section {
   margin-top: 0;
   padding-top: 60px;
+}
+
+/* =========================================================
+   MOBILE ENHANCEMENTS
+   (fills the gaps the existing breakpoints didn't cover:
+   brand/logo sizing, contact & partner padding, small phones)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .logo {
+    height: 54px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .company-name {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .contact-section {
+    padding: 70px 25px;
+  }
+
+  .contact-container {
+    gap: 40px;
+  }
+
+  .hero-stats {
+    gap: 30px;
+  }
+
+  .stat-box h2 {
+    font-size: 26px;
+  }
+
+  .partners-section {
+    padding: 60px 6% 35px;
+  }
+
+  .partner-card {
+    width: 140px;
+    height: 100px;
+    padding: 12px;
+  }
+
+  .partner-card img {
+    max-height: 70px;
+  }
+
+  .quote-header h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 14px 16px;
+  }
+
+  .logo {
+    height: 42px;
+  }
+
+  .company-name {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links li a {
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 130px 18px 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-tag {
+    font-size: 11px;
+    padding: 8px 14px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+  }
+
+  .team-quote {
+    padding: 18px;
+  }
+
+  .contact-section {
+    padding: 50px 18px;
+  }
+
+  .contact-left h2 {
+    font-size: 26px;
+  }
+
+  .partner-card {
+    width: 120px;
+    height: 90px;
+  }
+
+  model-viewer {
+    width: 100%;
+    max-width: 280px;
+    height: 260px;
+  }
+
+  .model-track model-viewer {
+    width: 210px;
+    height: 200px;
+  }
+
+  #machine-image {
+    height: 260px;
+  }
+
+  .part-card img {
+    width: 160px;
+    height: 160px;
+    padding: 10px;
+  }
+
+  .slider-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .quote-container {
+    padding: 28px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .model-track,
+  .machine-track {
+    animation: none;
+  }
 }
