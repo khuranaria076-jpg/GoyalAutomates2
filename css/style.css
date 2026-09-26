@@ -596,6 +596,13 @@ model-viewer {
   width: max-content;
 
   animation: moveModels 18s linear infinite;
+
+  cursor: grab;
+}
+
+.model-track:hover,
+.model-track.is-paused {
+  animation-play-state: paused;
 }
 
 /* MODEL VIEWER */
@@ -646,6 +653,13 @@ model-viewer {
   width: max-content;
 
   animation: moveMachines 18s linear infinite;
+
+  cursor: grab;
+}
+
+.machine-track:hover,
+.machine-track.is-paused {
+  animation-play-state: paused;
 }
 
 /* MACHINE CARD */
